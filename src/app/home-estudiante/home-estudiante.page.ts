@@ -4,6 +4,7 @@ import { IonicModule } from '@ionic/angular';
 
 @Component({
   selector: 'app-home-estudiante',
+  standalone:true,
   templateUrl: './home-estudiante.page.html',
   styleUrls: ['./home-estudiante.page.scss'],
   imports: [IonicModule]

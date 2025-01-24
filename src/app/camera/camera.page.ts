@@ -4,7 +4,8 @@ import { IonicModule } from '@ionic/angular';
 
 @Component({
   selector: 'app-camera',
-  templateUrl: './camera.page.html',
+  templateUrl: './camera.page.html', 
+  standalone:true,
   styleUrls: ['./camera.page.scss'],
   imports: [IonicModule]
 })
