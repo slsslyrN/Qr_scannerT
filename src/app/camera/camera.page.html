@@ -1,13 +1,28 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>camera</ion-title>
+    <ion-title>Escanee el código QR</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">camera</ion-title>
+      <ion-title size="large"></ion-title>
     </ion-toolbar>
   </ion-header>
+  <div>
+    <div>
+      <img src="assets/camera.png" alt="camera" class="login-image">
+    </div>
+  </div>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ clase }}</ion-card-title>
+      <ion-card-subtitle>{{ id }}</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      {{ horario }}
+    </ion-card-content>
+  </ion-card>
 </ion-content>
