@@ -1,13 +1,61 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>home-docente</ion-title>
+    <ion-title>Hola Diego!</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">home-docente</ion-title>
+      <ion-title size="large">Hola Diego!</ion-title>
     </ion-toolbar>
   </ion-header>
-</ion-content>
+
+  <ion-card (click)="navegar1()">
+
+    <div class="image-container">
+      <img src="assets/icon/Mat.jpg" alt="img de la asignatura" />
+    </div>
+  
+    <ion-card-content>
+      <ion-card-title>{{ clase1 }}</ion-card-title>
+      <ion-card-subtitle>{{ id1 }}</ion-card-subtitle>
+    </ion-card-content>
+
+    <ion-card-content>
+      {{ horario1 }}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card (click)="navegar2()">
+
+    <div class="image-container">
+      <img src="assets/icon/fisica.jpg" alt="img de la asignatura" />
+    </div>
+  
+    <ion-card-content>
+      <ion-card-title>{{ clase2 }}</ion-card-title>
+      <ion-card-subtitle>{{ id2 }}</ion-card-subtitle>
+    </ion-card-content>
+
+    <ion-card-content>
+      {{ horario2 }}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card (click)="navegar3()">
+
+    <div class="image-container">
+      <img src="assets/icon/quimica.jpg" alt="img de la asignatura" />
+    </div>
+  
+    <ion-card-content>
+      <ion-card-title>{{ clase3 }}</ion-card-title>
+      <ion-card-subtitle>{{ id3 }}</ion-card-subtitle>
+    </ion-card-content>
+
+    <ion-card-content>
+      {{ horario3 }}
+    </ion-card-content>
+  </ion-card>
+
