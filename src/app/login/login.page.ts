@@ -3,6 +3,7 @@ import { IonicModule } from '@ionic/angular';
 import { Router,NavigationExtras } from '@angular/router';
 import { FormControl,FormGroup,Validators ,ReactiveFormsModule  } from '@angular/forms';
 import { AlertController } from '@ionic/angular'
+import { AuthServiceService } from '../services/auth-service.service';
 
 @Component({
   selector: 'app-login',
@@ -18,7 +19,7 @@ export class LoginPage implements OnInit {
     pass: new FormControl('',[Validators.required, Validators.minLength(4),Validators.maxLength(20)]),
   });
 
-  constructor(private router:Router,private alertController:AlertController) { }
+  constructor(private router:Router,private alertController:AlertController,private authService:AuthServiceService) { } 
 
   navegar(){
 
@@ -37,10 +38,11 @@ export class LoginPage implements OnInit {
        const userPassKey = `${this.usuario.value.user}:${this.usuario.value.pass}`;
 
        if (loginMap[userPassKey]) {
-         this.router.navigate([loginMap[userPassKey]], setData);
-       } else {
-         this.presentAlert("Error Login", "Usuario o la contraseña son incorrectos");
-       }   
+        this.router.navigate([loginMap[userPassKey]], setData);
+        this.authService.login();
+      } else {
+        this.presentAlert("Error Login", "Usuario o la contraseña son incorrectos");
+      }
   }
 
   async presentAlert(titulo:string, mensaje:string) {
