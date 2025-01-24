@@ -10,17 +10,21 @@ import { IonicModule } from '@ionic/angular';
 })
 export class CameraPage implements OnInit {
 
-  clase:string = ""
-  id:string = ""
-  horario:string = ""
-  
-  constructor(private router:Router) { 
-    this.clase = this.router.getCurrentNavigation()?.extras.state?.['nombre']
-    this.id = this.router.getCurrentNavigation()?.extras.state?.['id']
-    this.horario = this.router.getCurrentNavigation()?.extras.state?.['horario']
-    }
+  clase: string = "";
+  id: string = "";
+  horario: string = "";
+
+  constructor(private router: Router) {
+    this.clase = this.router.getCurrentNavigation()?.extras.state?.['nombre'];
+    this.id = this.router.getCurrentNavigation()?.extras.state?.['id'];
+    this.horario = this.router.getCurrentNavigation()?.extras.state?.['horario'];
+  }
 
   ngOnInit() {
   }
 
+  
+  regresarHomeEstudiante() {
+    this.router.navigate(['/home-estudiante']);
+  }
 }

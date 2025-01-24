@@ -15,7 +15,7 @@
       <ion-card-title>{{ clase }}</ion-card-title>
       <ion-card-subtitle>{{ id }}</ion-card-subtitle>
     </ion-card-header>
-  
+
     <ion-card-content>
       {{ horario }}
     </ion-card-content>
@@ -24,4 +24,6 @@
   <div>
     <img src="assets/qr-code.png" alt="qr code" class="login-image">
   </div>
+
+  <ion-button expand="full" color="primary" (click)="registrarAsistencia()">Registrar Asistencia</ion-button>
 </ion-content>

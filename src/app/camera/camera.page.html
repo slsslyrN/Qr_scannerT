@@ -10,11 +10,13 @@
       <ion-title size="large"></ion-title>
     </ion-toolbar>
   </ion-header>
+
   <div>
     <div>
       <img src="assets/camera.png" alt="camera" class="login-image">
     </div>
   </div>
+
   <ion-card>
     <ion-card-header>
       <ion-card-title>{{ clase }}</ion-card-title>
@@ -25,4 +27,8 @@
       {{ horario }}
     </ion-card-content>
   </ion-card>
+
+  <ion-button (click)="regresarHomeEstudiante()" expand="full" color="primary" class="boton-regresar">
+    Regresar a Home Estudiante
+  </ion-button>
 </ion-content>
